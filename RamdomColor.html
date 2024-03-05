@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RamdomColorChange</title>
+    <style>
+        #btn{
+            border-radius: 50px;
+            margin: 40% 50% ;
+            font-size: 40px;
+        }
+        #btn:hover{
+            background-color: black;
+            color:white;
+            box-shadow: 10px 20px  10px yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" id="btn" value="Change color">
+    <script>
+        let color = ['red','blue','green','brown','white','black','yellow','pink'];
+        let btn=document.getElementById("btn");
+        btn.addEventListener('click',function(){
+ //console.log(Math.floor(Math.random()*color.length));
+ let randomColor = color[Math.floor(Math.random()*color.length)];
+ console.log(randomColor);
+ document.body.style.background=randomColor;
+        });
+    </script>
+</body>
+</html>
